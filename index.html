@@ -10,13 +10,13 @@
 	-->
 	<header class="main-header">
 		<nav class="main-navigation">
-			<a href="index.html" class="index-logo">
-				<img src="img/sedona-logo.png" width="140" height="72" alt="Логотип Седона">
+			<a class="index-logo">
+				<img src="img/sedona-logo.png">
 			</a>
 			<ul class="site-navigation">
-				<li><a href="info.html">Информация</a></li>
-				<li><a href="gallery.html">Фото и видео</a></li>
-				<li><a href="map.html">Карта штата</a></li>
+				<li><a href="#">Информация</a></li>
+				<li><a href="#">Фото и видео</a></li>
+				<li><a href="#">Карта штата</a></li>
 				<li><a href="hotel.html">Гостиницы</a></li>
 			</ul>
 		</nav>
@@ -52,17 +52,17 @@
 		<section class="features">
 			<ul class="features-list">
 				<li class="features-item">
-					<img src="img/home.png" alt="Жильё">
+					<img src="img/home.jpg" alt="Жильё">
 					<h2>Жильё</h2>
 					<p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
 				</li>
 				<li class="features-item">
-					<img src="img/food.png" alt="Еда">
+					<img src="img/food.jpg" alt="Еда">
 					<h2>Еда</h2>
 					<p>Всегда заказывайте фирменный бургер, вы не разочеруетесь!</p>
 				</li>
 				<li class="features-item">
-					<img src="img/present.png" alt="Сувениры">
+					<img src="img/present.jpg" alt="Сувениры">
 					<h2>Сувениры</h2>
 					<p>Не только китайского, но и местного производства!</p>
 				</li>
@@ -108,21 +108,7 @@
 
 		<h2>Заинтересовались?</h2>
 		<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-		<!--
-		------------------------ ФОРМА ПОИСКА ГОСТИНИЦЫ ------------------------
-		-->
-		<form action="/echo" method="post" class="search-hostel">
-			<h2>Поиск гостиницы в седоне</h2>
-			<label for="arrival">Дата заезда:</label>
-			<input type="date" id="arrival" name="arrival" value="2017-04-24"><br>
-			<label for="departure">Дата выезда:</label>
-			<input type="date" id="departure" name="departure" value="2017-07-04"><br>
-			<label for="adults">Взрослые:</label>
-			<input type="number" id="adults" name="adults" value="2" min="0" max="100">
-			<label for="children">Дети:</label>
-			<input type="number" id="children" name="children" value="0" min="0" max="100"><br>
-			<input type="submit" value="Найти" class="button-search">
-		</form>
+		<a href="form.html"><h2>Поиск гостиницы в седоне</h2></a>
 		<!--<section class="map"></section>-->
 	</main>
 	<!--
@@ -132,14 +118,14 @@
 		<h2 class="visitsedona">#Visitsedona</h2>
 		<div class="social">
 			<ul class="social-list" style="background: #333;">
-				<li class="social-item"><a href="#"><img src="img/t.png" width="17" height="15" alt="Твиттер"></a></li>
-				<li class="social-item"><a href="#"><img src="img/fb-icon.png" width="12" height="22" alt="Фейсбук"></a></li>
-				<li class="social-item"><a href="#"><img src="img/youtube.png" width="20" height="16" alt="Ютуб"></a></li>
+				<li class="social-item"><a href="#"><img src="img/t.svg" width="17" height="15" alt="Твиттер"></a></li>
+				<li class="social-item"><a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук"></a></li>
+				<li class="social-item"><a href="#"><img src="img/youtube.svg" width="20" height="16" alt="Ютуб"></a></li>
 			</ul>
 		</div>
 		<div class="copyright">
 			<p class="copyright-by">Website by</p>
-			<a href="https://htmlacademy.ru/" class="copyright-img"><img src="img/htmlacademy.png" width="115" height="41" alt="HTML Academy"></a>
+			<a href="https://htmlacademy.ru/" class="copyright-img"><img src="img/htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
 		</div>
 	</footer>
 </body>
