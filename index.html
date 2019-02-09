@@ -3,13 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Sedona</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<!-------------------------- HEADER -------------------------->
 	<header class="main-header">
 		<nav class="main-navigation">
 			<a class="index-logo">
-				<img src="img/sedona-logo.png" alt="Логотип Седона">
+				<img src="img/sedona-logo.svg" alt="Логотип Седона">
 			</a>
 			<ul class="site-navigation">
 				<li><a href="#">Информация</a></li>
@@ -24,9 +27,11 @@
 		<section class="slider">
 			<img src="img/welcome1.jpg" width="1200" height="800" class="slider-img" alt="Welcome to the gorgeous">
 		</section>
-
-		<h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-		<p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
+		
+		<div class="main-title">
+			<h2>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
+			<p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>	
+		</div>
 		<!-------------------------- НАСТОЯЩИЙ ГОРОДОК -------------------------->
 		<section class="real-city">
 			<div class="real-city-info">
@@ -97,7 +102,7 @@
 				</li>
 			</ul>
 		</section>
-
+	<div class="interested">
 		<h2>Заинтересовались?</h2>
 		<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
 		<a href="form.html"><h2>Поиск гостиницы в седоне</h2></a>
@@ -113,21 +118,22 @@
 			<input type="number" id="children" name="children" value="0" min="0" max="100"><br>
 			<button type="submit" class="button-search">Найти</button>
 		</form>	
-		<!--<section class="map"></section>-->
+		<section class="map"><img src="img/map.jpg" width="1200" height="595" alt="Карта гостиницы в седоне"></section>
+	</div>
 	</main>
 	<!-------------------------- FOOTER --------------------------->
 	<footer class="main-footer">
 		<h2 class="visitsedona">#Visitsedona</h2>
 		<div class="social">
-			<ul class="social-list" style="background: #333;">
+			<ul class="social-list">
 				<li class="social-item"><a href="#"><img src="img/t.svg" width="17" height="15" alt="Твиттер"></a></li>
 				<li class="social-item"><a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук"></a></li>
 				<li class="social-item"><a href="#"><img src="img/youtube.svg" width="20" height="16" alt="Ютуб"></a></li>
 			</ul>
 		</div>
 		<div class="copyright">
-			<p class="copyright-by">Website by</p>
-			<a href="https://htmlacademy.ru/" class="copyright-img"><img src="img/htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
+			<p>Website by</p>
+			<a href="https://htmlacademy.ru/"><img src="img/htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
 		</div>
 	</footer>
 </body>
