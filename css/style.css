@@ -1,0 +1,232 @@
+body{
+	margin: 0;
+	padding: 0;
+
+	font-family: "PT Sans";
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 26px;
+	background-color: #f2f2f2;
+}
+.main-header{
+	background-color: #ffffff;
+}
+.main-header 
+.main-navigation 
+.site-navigation a{
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.container h2{
+	font-size: 21px;
+	font-weight: bold;
+	color: #000000;
+}
+.container p{
+	font-size: 14px;
+	font-weight: none;
+	color: #333333;
+}
+.main-title{
+	background-color: #ffffff;
+	text-align: center;
+	line-height: 26px;
+}
+/************ настоящий городок / мост дьявола *************/
+
+.real-city,
+.bridge{
+	background-color: #81b3d2;
+	text-align: center;
+}
+.real-city h2,
+.real-city p,
+
+.bridge h2,
+.bridge p{
+	color: #ffffff;;
+	line-height: 21px;
+}
+
+/*********** features **************/
+.features{
+	background-color: #ffffff;
+}
+.features-item{
+	text-align: center;;
+}
+
+.mini-info{
+	background-color: #eeeeee;
+	text-align: center;
+}
+/****************/
+.interested{
+	background-color: #ffffff;
+	text-align: center;
+}
+.interested h2{
+	font-size: 30px;
+	line-height: 36px;
+}
+.interested p{
+	font-size: 14px;
+	line-height: 24px;
+}
+.interested a{
+	display: inline-block;
+	text-decoration: none;
+	background-color: #766357;
+}
+.interested a > h2{
+	font-size: 21px;
+	line-height: 24px;
+	color: #eee;
+}
+/******** поиск гостиницы в седоне *******/
+.search-hostel{
+	background-color: #ffffff;
+}
+.search-hostel label{
+	font-size: 14px;
+	line-height: 26px;
+	color: #000000;
+	font-weight: bold;
+}
+.search-hostel input{
+	background-color: #f2f2f2;
+	border: 0;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.button-search{
+	background-color: #81b3d2;
+	border: 0;
+	font-size: 21px;
+	line-height: 26px;
+	color: #ffffff;
+	font-weight: bold;
+}
+.button-search:hover{
+	background-color: #669ec0;
+}
+.button-search:focus{
+	background-color: #5496bd;
+}
+/******* карта *******/
+
+/********** Footer **************/
+.main-footer{
+	display: flex;
+	height: 120px;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.social-list{
+	display: flex;
+}
+.social-list li{
+
+}
+li.social-item a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 6px;		/******* этот плюс  *******/
+	width: 47px;
+	height: 47px;
+	background-color: #81b3d2;
+}
+li.social-item a:hover{
+	background-color: #669ec0;
+}
+li.social-item a:focus{
+	background-color: #5496bd;
+}
+.copyright{
+	display: flex;
+	align-items: center;
+	margin-left: -6px;      /******* минус здесь *******/
+}
+.copyright p{
+	margin: 0;
+	padding-right: 8px;
+}
+.copyright a{
+	height: 41px;
+}
+/*
+---------------  HOTEL.HTML ---------------
+*/
+
+.found{
+	background-color: #ffffff;
+	border-bottom: 1px solid #e5e5e5;
+}
+.found-list li{
+	font-size: 12px;
+	line-height: 18px;
+	color: #000000;
+}
+.found-list a{
+	text-decoration: none;
+	color: #999999;
+	border-bottom: 1px dotted #81b3d2;
+}
+.found-list a.current-item{
+	border-bottom: none;
+	color: #81b3d2;
+}
+
+/************ Found-item ***************/
+.found-item{
+	background-color: #ffffff;
+	border-bottom: 1px solid #e5e5e5;
+}
+.found-item h2{
+	line-height: 26px;
+}
+.found-item p{
+	line-height: 21px;
+}
+.button-more{
+	background-color: #81b3d2;
+}
+.button-more:hover{
+	background-color: #669ec0;
+}
+.button-more:focus{
+	background-color: #5496bd;
+	color: #88b6d1;
+}
+.button-booking{
+	background-color: #766357;
+}
+.button-booking:hover{
+	background-color: #604e43;
+}
+.button-booking:focus{
+	background-color: #503e33;
+	color: #857871;
+}
+.button-more,
+.button-booking{
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+}
+.mark{
+	display: inline-block;
+	background-color: #f2f2f2;
+	color: #666666;
+}
