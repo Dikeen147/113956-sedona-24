@@ -9,6 +9,8 @@ body{
 	background-color: #f2f2f2;
 }
 .main-header{
+	width: 1200px;
+	margin: 0 auto;
 	background-color: #ffffff;
 }
 .main-header 
@@ -19,12 +21,43 @@ body{
 	font-weight: bold;
 	color: #000000;
 }
-ul{
+.site-navigation,
+.real-city-list,
+.features-list,
+.bridge-list,
+.mini-info-list,
+.social-list,
+
+/** hostel.html **/
+.selection-list-1,
+.selection-list-2,
+.found-list,
+.mark-list{
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
 }
-
+.index-logo{
+	display: flex;
+	justify-content: center;
+	width: 200px;
+	position: absolute;
+	left: 50%;
+	margin-left: -100px;
+	z-index: 12;
+}
+.site-navigation{
+	display: flex;
+	justify-content: space-between;
+	min-height: 56px;
+}
+.site-navigation li{
+	margin: auto;
+}
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
 .container h2{
 	font-size: 21px;
 	font-weight: bold;
@@ -36,17 +69,36 @@ ul{
 	color: #333333;
 }
 .main-title{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 	background-color: #ffffff;
 	text-align: center;
 	line-height: 26px;
+	min-height: 217px;
+}
+
+.container h2,
+.container p{
+	margin: 0;
 }
 /************ настоящий городок / мост дьявола *************/
-
 .real-city,
 .bridge{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	background-color: #81b3d2;
 	text-align: center;
 }
+.real-city-info,
+.bridge-info{
+	margin: auto;
+}
+.number{
+	padding:25px 0;
+}
+
 .real-city h2,
 .real-city p,
 
@@ -55,36 +107,69 @@ ul{
 	color: #ffffff;;
 	line-height: 21px;
 }
+.mini-info h2,
+.mini-info p{
+	line-height: 21px;
+}
 
 /*********** features **************/
+.features-list{
+	display: flex;
+	align-items: center;
+	min-height: 333px;
+}
+.features-item{
+	flex-grow: 1;
+}
+.features-item h2{
+	padding: 25px 0;
+}
 .features{
 	background-color: #ffffff;
 }
 .features-item{
 	text-align: center;;
 }
-
+/******************/
 .mini-info{
 	background-color: #eeeeee;
 	text-align: center;
+}
+.mini-info-list{
+	display: flex;
+	min-height: 257px;
+	align-items: center;
+}
+.mini-info-item{
+	flex-grow: 1;
 }
 /****************/
 .interested{
 	background-color: #ffffff;
 	text-align: center;
 }
-.interested h2{
+.interested > h2{
 	font-size: 30px;
 	line-height: 36px;
+	padding-top: 50px;
 }
 .interested p{
 	font-size: 14px;
 	line-height: 24px;
+	padding: 30px 0 50px;
 }
 .interested a{
 	display: inline-block;
 	text-decoration: none;
 	background-color: #766357;
+	padding: 35px 140px;
+}
+.interested a:hover{
+	background-color: #604e43;
+}
+.interested a:focus{
+	background-color: #503e33;
+	color: #857871;
 }
 .interested a > h2{
 	font-size: 21px;
@@ -92,6 +177,9 @@ ul{
 	color: #eee;
 }
 /******** поиск гостиницы в седоне *******/
+.visually-hidden{
+	display: none;
+}
 .search-hostel{
 	background-color: #ffffff;
 }
@@ -126,37 +214,52 @@ ul{
 /********** Footer **************/
 .main-footer{
 	display: flex;
-	height: 120px;
-	justify-content: space-between;
 	align-items: center;
-	background-color: rgba(255,255,255,0.5);
+	width: 1200px;
+	min-height: 120px;
+	margin: 0 auto;
+	background-color: rgba(255,255,255,0.8);
 }
-
+.visitsedona,
+.social,
+.copyright{
+	display: flex;
+	flex-grow: 1;
+}
+.visitsedona{
+	margin-left: 134px;
+}
+.social{
+	justify-content: center;
+}
+.copyright{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: 100px;
+}
 .social-list{
 	display: flex;
+	align-items: center;
 }
-.social-list li{
 
-}
 li.social-item a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-right: 6px;		/******* этот плюс  *******/
+	margin-right: 6px;
 	width: 47px;
 	height: 47px;
 	background-color: #81b3d2;
+}
+li.social-item:last-child{
+	margin-right: 0;
 }
 li.social-item a:hover{
 	background-color: #669ec0;
 }
 li.social-item a:focus{
 	background-color: #5496bd;
-}
-.copyright{
-	display: flex;
-	align-items: center;
-	margin-left: -6px;      /******* минус здесь *******/
 }
 .copyright p{
 	margin: 0;
@@ -165,18 +268,39 @@ li.social-item a:focus{
 .copyright a{
 	height: 41px;
 }
+
 /*
 ---------------  HOTEL.HTML ---------------
 */
-
-.found{
+.found {
+	display: flex;
+	align-items: center;
 	background-color: #ffffff;
 	border-bottom: 1px solid #e5e5e5;
 }
+.found h2{
+	padding: 30px 50px 30px 70px;
+}
+.arrows{
+	display: flex;
+	margin-left: auto;
+	margin-right: 73px;
+}
+.arrows a{
+	padding-right: 10px;
+}
+.found-list {
+	display: flex;
+	align-items: center;
+}
 .found-list li{
+	padding-right: 33px;
 	font-size: 12px;
 	line-height: 18px;
 	color: #000000;
+}
+.found-list li:first-child{
+	padding-right: 40px;
 }
 .found-list a{
 	text-decoration: none;
@@ -190,8 +314,13 @@ li.social-item a:focus{
 
 /************ Found-item ***************/
 .found-item{
+	display: flex;
+	align-items: center;
 	background-color: #ffffff;
 	border-bottom: 1px solid #e5e5e5;
+}
+.found-item > img{
+	padding: 30px 30px 30px 73px;
 }
 .found-item h2{
 	line-height: 26px;
@@ -199,7 +328,16 @@ li.social-item a:focus{
 .found-item p{
 	line-height: 21px;
 }
+.found-item-info div{
+	display: flex;
+	padding: 5px 0 10px;
+}
+.found-item-info div p{
+	width: 114px;
+}
+
 .button-more{
+	padding: 8px 17px;
 	background-color: #81b3d2;
 }
 .button-more:hover{
@@ -210,6 +348,7 @@ li.social-item a:focus{
 	color: #88b6d1;
 }
 .button-booking{
+	padding: 8px 17px;
 	background-color: #766357;
 }
 .button-booking:hover{
@@ -225,8 +364,85 @@ li.social-item a:focus{
 	color: #ffffff;
 	font-weight: bold;
 }
+.mark-div{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-left: auto;
+	margin-right: 73px;
+}
+.mark-list{
+	display: flex;
+	align-items: center;
+	margin-bottom: 48px;
+}
+.mark-list li{
+	margin-left: 6px;
+}
 .mark{
 	display: inline-block;
+	padding: 7px 15px;
 	background-color: #f2f2f2;
 	color: #666666;
+}
+/*********** Инфраструктура ************/
+.selection{
+	
+	background: url("../img/filter-background.jpg") no-repeat center;
+}
+.selection-form{
+	width: 1200px;
+	min-height: 219px;
+	display: flex;
+	justify-content: space-between;
+}
+.selection-form .form-block {
+	display: flex;
+	align-items: center;
+	margin-left: 73px;
+}
+.selection-form .form-block fieldset{
+	border: 0;
+}
+.selection-form .form-block fieldset:last-child{
+	margin-left: 114px;
+}
+.selection-form legend,
+.price p{
+	padding-top: 20x;
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: bold;
+}
+.selection-form label{
+	color: #ffffff;
+	padding-left: 17px;
+}
+.selection-list-1 li,
+.selection-list-2 li {
+	padding-top: 15px;
+}
+
+.price{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: 73px;
+	color: #ffffff;
+}
+.button-show{
+	width: 137px;
+	background-color: transparent;
+	border: 2px solid white;
+	padding: 10px;
+	border-radius: 2px;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 21px;
+	text-transform: uppercase;
+}
+.price .button-show{
+	margin-left: auto;
+	margin-right: auto;
 }
