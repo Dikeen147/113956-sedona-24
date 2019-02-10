@@ -91,6 +91,12 @@ body{
 	background-color: #81b3d2;
 	text-align: center;
 }
+.slider img,
+.real-city-img img,
+.bridge-img img,
+.map img{
+	display: block;
+}
 .real-city-info,
 .bridge-info{
 	margin: auto;
@@ -268,7 +274,6 @@ li.social-item a:focus{
 .copyright a{
 	height: 41px;
 }
-
 /*
 ---------------  HOTEL.HTML ---------------
 */
