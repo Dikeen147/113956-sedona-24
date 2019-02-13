@@ -54,6 +54,10 @@ body{
 .site-navigation li{
 	margin: auto;
 }
+.site-navigation .current{
+	color: #766357;
+	font-weight: bold;
+}
 .container{
 	width: 1200px;
 	margin: 0 auto;
@@ -165,10 +169,15 @@ body{
 	padding: 30px 0 50px;
 }
 .interested a{
-	display: inline-block;
+	display: flex;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding-top: 35px;
+	padding-left: 140px;
+	width: 570px;
+	height: 87px;
 	text-decoration: none;
 	background-color: #766357;
-	padding: 35px 140px;
 }
 .interested a:hover{
 	background-color: #604e43;
@@ -184,11 +193,46 @@ body{
 }
 /******** поиск гостиницы в седоне *******/
 .visually-hidden{
-	display: none;
+	display: block;
 }
 .search-hostel{
+	position: absolute;
+	left: 50%;
+	display: flex;
+	margin-left: -285px;
+	flex-direction: column;
+	align-items: center;
+	width: 570px;
+	min-height: 397px;
 	background-color: #ffffff;
 }
+.search-hostel .arrival,
+.search-hostel .departure,
+.search-hostel .adults-children{
+	display: flex;
+	width: 460px;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+.search-hostel .arrival{
+	margin-top: 55px;
+}
+.search-hostel .arrival input,
+.search-hostel .departure input{
+	width: 346px;
+}
+.search-hostel .adults-children input{
+	text-align: center;
+	width: 115px;
+}
+.search-hostel .adults label{
+	padding-right: 39px;
+}
+.search-hostel .children label{
+	padding-right: 25px;
+}
+
 .search-hostel label{
 	font-size: 14px;
 	line-height: 26px;
@@ -196,18 +240,29 @@ body{
 	font-weight: bold;
 }
 .search-hostel input{
+	box-sizing: border-box;
+	padding: 10px 14px;
 	background-color: #f2f2f2;
 	border: 0;
 	font-weight: bold;
 	text-transform: uppercase;
 }
+/********* СТИЛИЗАЦИЯ ИНПУТОВ, добавление иконки календаря **********/
+.search-hostel .arrival input[type="text"]::after{
+	
+}
+/********************/
 .button-search{
 	background-color: #81b3d2;
 	border: 0;
+	width: 460px;
+	height: 60px;
 	font-size: 21px;
 	line-height: 26px;
 	color: #ffffff;
 	font-weight: bold;
+	padding: 0;
+	margin-top: 25px;
 }
 .button-search:hover{
 	background-color: #669ec0;
@@ -216,7 +271,10 @@ body{
 	background-color: #5496bd;
 }
 /******* карта *******/
+.map{
+	
 
+}
 /********** Footer **************/
 .main-footer{
 	display: flex;
@@ -340,7 +398,7 @@ li.social-item a:focus{
 .found-item-info div p{
 	width: 114px;
 }
-
+/***       КНОПКИ Подробнее и забронировать       **/
 .button-more{
 	padding: 8px 17px;
 	background-color: #81b3d2;
@@ -392,7 +450,6 @@ li.social-item a:focus{
 }
 /*********** Инфраструктура ************/
 .selection{
-	
 	background: url("../img/filter-background.jpg") no-repeat center;
 }
 .selection-form{
@@ -421,14 +478,54 @@ li.social-item a:focus{
 	font-weight: bold;
 }
 .selection-form label{
+	display: flex;
 	color: #ffffff;
-	padding-left: 17px;
 }
+
+/************** СТИЛИЗУЕМ ЧЕКБОКСЫ *******************/
+.selection-form
+.selection-list-1,
+.selection-form
+.selection-list-2{
+	position: relative;
+}
+.selection-form 
+.form-block label::before{
+	content: "";
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	background-image: url("../img/checkbox-off.svg");
+	margin-right: 17px;
+}
+.selection-form input[type="checkbox"]{
+	display: none;
+}
+#pool:checked ~ label[for="pool"]::before {
+	background-image: url("../img/checkbox-on.svg");
+}
+#parking:checked ~ label[for="parking"]::before {
+	background-image: url("../img/checkbox-on.svg");
+}
+#wifi:checked ~ label[for="wifi"]::before {
+	background-image: url("../img/checkbox-on.svg");
+}
+
+#hostel:checked ~ label[for="hostel"]::before {
+	background-image: url("../img/checkbox-on.svg");
+}
+#motel:checked ~ label[for="motel"]::before {
+	background-image: url("../img/checkbox-on.svg");
+}
+#apartments:checked ~ label[for="apartments"]::before {
+	background-image: url("../img/checkbox-on.svg");
+}
+/*********************************/
+
 .selection-list-1 li,
 .selection-list-2 li {
 	padding-top: 15px;
 }
-
 .price{
 	display: flex;
 	flex-direction: column;
@@ -436,6 +533,46 @@ li.social-item a:focus{
 	margin-right: 73px;
 	color: #ffffff;
 }
+.price-span{
+	display: flex;
+	width: 316px;
+	height: 25px;
+	border: 2px solid white;
+	margin: 12px 0 20px;
+	border-radius: 2px;
+}
+.price-span div{
+	width: 100%;
+	text-align: center;
+}
+.price-span div:first-child{
+	border-right: 2px solid white;
+}
+
+.span-randge{
+	position: relative;
+	background-color: #ffffff;
+	height: 2px;
+	margin-bottom: 32px;
+}
+.span-randge::before,
+.span-randge::after{
+	position: absolute;
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image: url("../img/filter-button.svg")
+}
+.span-randge::before{
+	top: -10px;
+	left: 0px;
+}
+.span-randge::after{
+	top: -10px;
+	right: 55px;
+}
+
 .button-show{
 	width: 137px;
 	background-color: transparent;
@@ -446,6 +583,12 @@ li.social-item a:focus{
 	font-size: 14px;
 	line-height: 21px;
 	text-transform: uppercase;
+	cursor: pointer;
+	transition: 0.2s;
+}
+.button-show:hover{
+	background-color: #ffffff;
+	color: black;
 }
 .price .button-show{
 	margin-left: auto;
