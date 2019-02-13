@@ -19,7 +19,7 @@
 				<li><a href="#">Фото и видео</a></li>
 				<li></li>
 				<li><a href="#">Карта штата</a></li>
-				<li><a href="#">Гостиницы</a></li>
+				<li class="current">Гостиницы</li>
 			</ul>
 		</nav>
 	</header>
@@ -32,7 +32,7 @@
 					<fieldset>
 						<legend>Инфраструктура:</legend>
 						<ul class="selection-list-1">
-							<li><input type="checkbox" id="pool" name="pool" checked><span></span><label for="pool">Бассейн</label></li>
+							<li><input type="checkbox" id="pool" name="pool" checked><label for="pool">Бассейн</label></li>
 							<li><input type="checkbox" id="parking" name="parking"><label for="parking">Парковка</label></li>
 							<li><input type="checkbox" id="wifi" name="wifi"><label for="wifi">Wi-Fi</label></li>
 						</ul>
@@ -48,11 +48,11 @@
 				</div>
 				<div class="price">
 					<p>Стоимость в стуки (Р):</p>
-					<span class="price-span">от 0 до 3000</span>
-					<span class="span-randge">ползунок
-						<div class="randge-1"></div>
-						<div class="randge-2"></div>
+					<span class="price-span">
+						<div>от 0</div>
+						<div>от 3000</div>
 					</span>
+					<span class="span-randge"></span>
 					<button type="submit" class="button-show">Показать</button>
 				</div>
 			</form>
