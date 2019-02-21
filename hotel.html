@@ -9,17 +9,17 @@
 </head>
 <body>
 	<!---------------------- HEADER -----------------------	-->
+	<div class="box-shadow">
 	<header class="main-header">
 		<nav class="main-navigation">
 			<a href="index.html" class="index-logo">
-				<img src="img/sedona-logo.svg" alt="Логотип Седона">
+				<img src="img/sedona-logo.svg" width="140" height="72" alt="Логотип Седона">
 			</a>
 			<ul class="site-navigation">
 				<li><a href="#">Информация</a></li>
 				<li><a href="#">Фото и видео</a></li>
-				<li></li>
 				<li><a href="#">Карта штата</a></li>
-				<li class="current">Гостиницы</li>
+				<li>Гостиницы</li>
 			</ul>
 		</nav>
 	</header>
@@ -27,6 +27,7 @@
 	<main class="container">
 		<!-------------------------- ИНФРАСТРУКТУРА, ТИП ЖИЛЬЯ, СТОИМОСТЬ -------------------------->
 		<section class="selection">
+			
 			<form action="https://echo.htmlacademy.ru/" method="post" class="selection-form">
 				<div class="form-block">
 					<fieldset>
@@ -46,13 +47,19 @@
 						</ul>
 					</fieldset>
 				</div>
-				<div class="price">
-					<p>Стоимость в стуки (Р):</p>
-					<span class="price-span">
-						<div>от 0</div>
-						<div>от 3000</div>
-					</span>
-					<span class="span-randge"></span>
+				<div class="filter-range">
+					<div class="filter-range-title">Стоимость в сутки (Р):</div>
+					<div class="price-controls">
+						<label class="min-price">от <input type="text" name="min-price" value="0"></label>
+        				<label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+					</div>
+					<div class="range-controls">
+						<div class="scale">
+				        	<div class="bar"></div>
+				        </div>
+				        <div class="range-toggle range-toggle-min"></div>
+        				<div class="range-toggle range-toggle-max"></div>
+					</div>
 					<button type="submit" class="button-show">Показать</button>
 				</div>
 			</form>
@@ -150,5 +157,6 @@
 			<a href="https://htmlacademy.ru/" class="copyright-img"><img src="img/htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
 		</div>
 	</footer>
+	</div>
 </body>
 </html>
