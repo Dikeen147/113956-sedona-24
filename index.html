@@ -9,15 +9,15 @@
 </head>
 <body>
 	<!-------------------------- HEADER -------------------------->
+	<div class="box-shadow">
 	<header class="main-header">
 		<nav class="main-navigation">
 			<a class="index-logo">
-				<img src="img/sedona-logo.svg" alt="Логотип Седона">
+				<img src="img/sedona-logo.svg" width="140" height="72" alt="Логотип Седона">
 			</a>
 			<ul class="site-navigation">
 				<li><a href="#">Информация</a></li>
 				<li><a href="#">Фото и видео</a></li>
-				<li></li>
 				<li><a href="#">Карта штата</a></li>
 				<li><a href="hotel.html">Гостиницы</a></li>
 			</ul>
@@ -28,19 +28,22 @@
 		<section class="slider">
 			<img src="img/welcome1.jpg" width="1200" height="800" class="slider-img" alt="Welcome to the gorgeous">
 		</section>
-		
-		<div class="main-title">
-			<h2>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
-			<p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>	
-		</div>
+
+		<section class="under-slider">
+			<div class="polygone"></div>
+			<div class="main-title">
+				<h2>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
+				<p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>	
+			</div>
+		</section>
 		<!-------------------------- НАСТОЯЩИЙ ГОРОДОК -------------------------->
 		<section class="real-city">
 			<div class="real-city-info">
 				<ul class="real-city-list">
 					<li class="real-city-item">
 						<h2>Настоящий<br> городок</h2>
-						<p class="number">-№1-</p>
-						<p>Седона - не аттракцион для туристов,<br> там течёт своя жизнь</p>
+						<p class="number">— №1 —</p>
+						<p>Седона — не аттракцион для туристов,<br> там течёт своя жизнь</p>
 					</li>
 				</ul>
 			</div>
@@ -52,17 +55,23 @@
 		<section class="features">
 			<ul class="features-list">
 				<li class="features-item">
-					<img src="img/house.svg" alt="Жильё">
+					<div>
+						<img src="img/house.svg" alt="Жильё">
+					</div>
 					<h2>Жильё</h2>
 					<p>Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
 				</li>
 				<li class="features-item">
-					<img src="img/food.svg" alt="Еда">
+					<div>
+						<img src="img/food.svg" alt="Еда">	
+					</div>
 					<h2>Еда</h2>
 					<p>Всегда заказывайте фирменный бургер,<br> вы не разочеруетесь!</p>
 				</li>
 				<li class="features-item">
-					<img src="img/presents.svg" alt="Сувениры">
+					<div>
+						<img src="img/presents.svg" alt="Сувениры">	
+					</div>
 					<h2>Сувениры</h2>
 					<p>Не только китайского, но и местного<br> производства!</p>
 				</li>
@@ -77,7 +86,7 @@
 				<ul class="bridge-list">
 					<li class="bridge-item">
 						<h2>Там есть<br> мост дьявола</h2>
-						<p class="number">-№2-</p>
+						<p class="number">— №1 —</p>
 						<p>Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
 					</li>
 				</ul>
@@ -88,17 +97,17 @@
 			<ul class="mini-info-list">
 				<li class="mini-info-item">
 					<h2>Небольшая<br> площадь</h2>
-					<p class="number">-№3-</p>
+					<p class="number">— №3 —</p>
 					<p>Все достопримечательности<br> находятся очень близко</p>
 				</li>
 				<li class="mini-info-item">
 					<h2>Красивая<br> дорога</h2>
-					<p class="number">-№4-</p>
+					<p class="number">— №4 —</p>
 					<p>Ехать в седону из лас-вегаса совсем<br> не скучно!</p>
 				</li>
 				<li class="mini-info-item">
 					<h2>Мало<br> туристов</h2>
-					<p class="number">-№5-</p>
+					<p class="number">— №5 —</p>
 					<p>Большинство едет в гранд канбон<br> и толпится там</p>
 				</li>
 			</ul>
@@ -127,14 +136,21 @@
 					<input type="number" id="children" name="children" value="0" min="0" max="100">	
 				</div>
 			</div>
-			<button type="submit" class="button-search">Найти</button>
+			<button type="submit" class="button-search">НАЙТИ</button>
 		</form>	
-		<section class="map"><img src="img/map.jpg" width="1200" height="595" alt="Карта гостиницы в седоне"></section>
+		<section class="map">
+			<div class="map-image">
+				
+			</div>
+			<!--<img src="img/map.jpg" width="1200" height="595" alt="Карта гостиницы в седоне">-->
+		</section>
 	</div>
 	</main>
 	<!-------------------------- FOOTER --------------------------->
 	<footer class="main-footer">
-		<h2 class="visitsedona">#Visitsedona</h2>
+		<div class="visitsedona">
+			<h2 >#Visitsedona</h2>	
+		</div>
 		<div class="social">
 			<ul class="social-list">
 				<li class="social-item"><a href="#"><img src="img/t.svg" width="17" height="15" alt="Твиттер"></a></li>
@@ -147,5 +163,6 @@
 			<a href="https://htmlacademy.ru/"><img src="img/htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
 		</div>
 	</footer>
+	</div>
 </body>
 </html>
