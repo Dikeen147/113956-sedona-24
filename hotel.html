@@ -19,7 +19,7 @@
 				<li><a href="#">Информация</a></li>
 				<li><a href="#">Фото и видео</a></li>
 				<li><a href="#">Карта штата</a></li>
-				<li>Гостиницы</li>
+				<li class="current-page"><a href="#">Гостиницы</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -33,17 +33,17 @@
 					<fieldset>
 						<legend>Инфраструктура:</legend>
 						<ul class="selection-list-1">
-							<li><input type="checkbox" id="pool" name="pool" checked><label for="pool">Бассейн</label></li>
-							<li><input type="checkbox" id="parking" name="parking"><label for="parking">Парковка</label></li>
-							<li><input type="checkbox" id="wifi" name="wifi"><label for="wifi">Wi-Fi</label></li>
+							<li><input type="checkbox" id="pool" name="pool" checked class="visually-hidden"><label for="pool">Бассейн</label></li>
+							<li><input type="checkbox" id="parking" name="parking" class="visually-hidden"><label for="parking">Парковка</label></li>
+							<li><input type="checkbox" id="wifi" name="wifi" class="visually-hidden"><label for="wifi">Wi-Fi</label></li>
 						</ul>
 					</fieldset>
 					<fieldset>
 						<legend>Тип жилья:</legend>
 						<ul class="selection-list-2">
-							<li><input type="checkbox" id="hostel" name="hostel" checked><label for="hostel">Гостиница</label></li>
-							<li><input type="checkbox" id="motel" name="motel" checked><label for="motel">Мотель</label></li>
-							<li><input type="checkbox" id="apartments" name="apartments" checked><label for="apartments">Апартаменты</label></li>
+							<li><input type="checkbox" id="hostel" name="hostel" checked class="visually-hidden"><label for="hostel">Гостиница</label></li>
+							<li><input type="checkbox" id="motel" name="motel" checked class="visually-hidden"><label for="motel">Мотель</label></li>
+							<li><input type="checkbox" id="apartments" name="apartments" checked class="visually-hidden"><label for="apartments">Апартаменты</label></li>
 						</ul>
 					</fieldset>
 				</div>
@@ -74,15 +74,17 @@
 				<li><a href="#">По рейтингу</a></li>
 			</ul>
 			<div class="arrows">
-				<a href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt="up"></a>
-				<a href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt="down"></a>
+				<!--<a href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt="up"></a>
+				<a href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt="down"></a>-->
+				<a href="#" alt="по убыванию"></a>
+				<a href="#" alt="по возрастанию"></a>
 			</div>
 		</section>
 		<!-------------------------- СПИСОК НАЙДЕНО -------------------------->
 		<section class="found-item">
 			<img src="img/amara.jpg" width="135" height="90" alt="amara resort and spa">
 			<div class="found-item-info">
-				<h2>Amara resort & spa</h2>
+				<a href="#"><h2>Amara resort & spa</h2></a>
 				<div>
 					<p>гостиница</p>
 					<p>от 4000 Р.</p>	
@@ -91,7 +93,7 @@
 				<a href="#" class="button-booking">Забронировать</a>	
 			</div>
 			<div class="mark-div">
-				<ul class="mark-list">
+				<ul class="mark-list" aria-label="4 звезды">
 					<li><img src="img/star.svg" width="18" height="17" alt="mark"></li>
 					<li><img src="img/star.svg" width="18" height="17" alt="mark"></li>
 					<li><img src="img/star.svg" width="18" height="17" alt="mark"></li>
@@ -104,7 +106,7 @@
 		<section class="found-item">
 			<img src="img/desert.jpg"  width="135" height="90" alt="desert quail inn">
 			<div class="found-item-info">
-				<h2>Desert quail inn</h2>
+				<a href="#"><h2>Desert quail inn</h2></a>
 				<div>
 					<p>Мотель</p>
 					<p>от 3000 Р.</p>
@@ -113,7 +115,7 @@
 				<a href="#" class="button-booking">Забронировать</a>
 			</div>
 			<div class="mark-div">
-				<ul class="mark-list">
+				<ul class="mark-list" aria-label="3 звезды">
 					<li><img src="img/star.svg" width="18" height="17" alt="mark"></li>
 					<li><img src="img/star.svg" width="18" height="17" alt="mark"></li>
 					<li><img src="img/star.svg" width="18" height="17" alt="mark"></li>
@@ -125,7 +127,7 @@
 		<section class="found-item">
 			<img src="img/villas.jpg"  width="135" height="90" alt="villas at poco diablo">
 			<div class="found-item-info">
-				<h2>Villas at poco diablo</h2>
+				<a href="#"><h2>Villas at poco diablo</h2></a>
 				<div>
 					<p>Апартаменты</p>
 					<p>от 2000 Р.</p>
@@ -134,7 +136,7 @@
 				<a href="#" class="button-booking">Забронировать</a>
 			</div>
 			<div class="mark-div">
-				<ul class="mark-list">
+				<ul class="mark-list" aria-label="2 звезды">
 					<li><img src="img/star.svg" width="18" height="17" alt="mark"></li>
 					<li><img src="img/star.svg" width="18" height="17" alt="mark"></li>
 				</ul>
