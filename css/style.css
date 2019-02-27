@@ -274,10 +274,10 @@ body{
 /******** поиск гостиницы в седоне *******/
 
 .opacity-zero{
-	opacity: 0;
+	visibility: hidden;
 }
 .visually-show{
-	opacity: 1;
+	visibility: visible;
 }
 .search-hostel{
 	position: absolute;
@@ -379,54 +379,44 @@ body{
 	width: 24px;
 	background-color: #f2f2f2;
 }
-.minus {
-	background: url("../img/minus.svg") no-repeat center;
-	background-position: 100% 50%;
-}
-.plus{
-	background: url("../img/plus.svg") no-repeat center;
-	background-position: 0% 50%;
-}
-
-/*
-.search-hostel .adults label::before{
-	position: absolute;
-	top: 205px;
-	left: 180px;
+.search-hostel .adults-children .minus::before, 
+.search-hostel .adults-children .plus::before, 
+.search-hostel .adults-children .plus::after {
 	content: "";
+	display: block;
 	width: 12px;
 	height: 3px;
 	background-color: #a9a9a9;
-	background: url("../img/minus.svg") no-repeat center;
-}
-.search-hostel .adults label::after{
+
 	position: absolute;
-	top: 201px;
-	left: 258px;
-	content: "";
-	width: 11px;
-	height: 11px;
-	background: url("../img/plus.svg") no-repeat center;
+	top: 50%;
+	margin-top: -2px;
+	transition: 0.2s;
 }
-.search-hostel .children label::before{
-	position: absolute;
-	top: 205px;
-	left: 412px;
-	content: "";
-	width: 12px;
-	height: 3px;
-	background: url("../img/minus.svg") no-repeat center;
+.search-hostel .adults-children .minus::before {
+	left: 12px;
 }
-.search-hostel .children label::after{
-	position: absolute;
-	top: 201px;
-	left: 485px;
-	content: "";
-	width: 11px;
-	height: 11px;
-	background: url("../img/plus.svg") no-repeat center;
+.search-hostel .adults-children .plus::before {
+	right: 12px;
+} 
+.search-hostel .adults-children .plus::after {
+	transform: rotate(90deg);
+}
+
+.search-hostel .adults-children .minus:hover::before,
+.search-hostel .adults-children .plus:hover::before,
+.search-hostel .adults-children .plus:hover::after {
+	background-color: #666666;
+}
+/*
+.search-hostel .adults-input .inputAdults:focus {
+	outline: none;
+}
+.search-hostel .adults-input .inputAdults:focus .adults-input {
+	outline: 2px solid #81b3d2;
 }
 */
+
 .search-hostel label{
 	font-size: 14px;
 	line-height: 26px;
@@ -826,10 +816,10 @@ body{
 .form-block fieldset input:checked ~ svg.cb-on{
 	display: inline-block;
 }
-/*
-.form-block .visually-hidden:focus + label {
+.form-block .visually-hidden:focus ~ label{
 	outline: 2px solid #81b3d2;
 }
+/*
 #pool:checked ~ label[for="pool"]::before {
 	//background: url("../img/checkbox-on.svg") no-repeat;
 }
