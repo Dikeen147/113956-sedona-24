@@ -1,15 +1,42 @@
 //alert("hello");
 
+// ПОКАЗАТЬ ФОРМУ ПОИСКА ГОСТИНИЦЫ
 var searchHostelBtn = document.querySelector(".search-hostel-btn");
 var popup = document.querySelector(".search-hostel");
 
+var arrival = popup.querySelector("[name=arrival]");
+var bool = true;
+	
 searchHostelBtn.addEventListener("click", function(evt){
-	evt.preventDefault();
-	popup.classList.toggle("visually-show");
+	/*popup.classList.remove("visually-show2");*/
+	
+	if (popup.classList.contains("visually-close")) {
+		evt.preventDefault();
+		popup.classList.remove("visually-close");
+	}
+	if (popup.classList.contains("visually-show")) {
+			evt.preventDefault();
+			popup.classList.remove("visually-show");
+			popup.classList.add("visually-close");
+	} else {
+		evt.preventDefault();
+		popup.classList.add("visually-show");	
+		arrival.focus();
+	}
+	
+});
+window.addEventListener("keydown", function(evt){
+	if (evt.keyCode === 27 ) {
+		if (popup.classList.contains("visually-show")) {
+			evt.preventDefault();
+			popup.classList.remove("visually-show");
+			popup.classList.add("visually-close");
+		}
+	}
 });
 
-/*****   Search-hostel minus and plus click count++   ******/
 
+// В форме поиска гостиницы при нажатии минуса или плюса, убваляет либо прибавляет
 var adultsInput = document.querySelector(".adults-input");
 var minus1 = adultsInput.querySelector(".minus");
 var plus1 = adultsInput.querySelector(".plus");
@@ -25,7 +52,7 @@ var inputAdultsCount = parseInt(inputAdults.value);
 var inputChildrenCount = parseInt(inputChildren.value);
 
 minus1.addEventListener("click", function(){
-	if (inputAdultsCount > 0) {
+	if (inputAdultsCount > 1) {
 		inputAdults.value = inputAdultsCount - 1;
 	}
 	inputAdultsCount = parseInt(inputAdults.value);
