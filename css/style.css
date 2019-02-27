@@ -251,7 +251,6 @@ body{
 	width: 570px;
 	text-decoration: none;
 	background-color: #766357;
-	
 }
 .interested a:hover{
 	background-color: #604e43;
@@ -272,12 +271,50 @@ body{
 }
 
 /******** поиск гостиницы в седоне *******/
+@keyframes show{
+	0% {
+		transform: translateY(-400px);
+	}
+	30% {
+		transform: translateY(30px);
+	}
+	70% {
+		transform: translateY(-5px);
+	}
+	100% {
+		transform: translateY(0px);
+		visibility: visible;
+	} 
+}
+@keyframes close {
+	0% {
+		transform: translateY(0px);
+		visibility: visible;
+	}
+	30% {
+		transform: translateY(-5px);
+	}
+	70% {
+		transform: translateY(30px);
+	}
+	100% {
+		transform: translateY(-400px);
+		opacity: 0.9;
+		visibility: hidden;
+	} 
+}
 
 .opacity-zero{
 	visibility: hidden;
 }
 .visually-show{
-	visibility: visible;
+	/*visibility: visible;*/
+	animation: show 1s ;
+	animation-fill-mode: forwards;
+}
+.visually-close{
+	/*visibility: visible;*/
+	animation: close 1s;
 }
 .search-hostel{
 	position: absolute;
@@ -336,7 +373,7 @@ body{
 .search-hostel .arrival svg:hover{
 	fill: #666666;
 }
-.search-hostel .arrival svg:focus{
+.search-hostel .arrival svg:active{
 	fill: #81b3d2;
 }
 .search-hostel .departure svg{
@@ -349,7 +386,7 @@ body{
 .search-hostel .departure svg:hover{
 	fill: #666666;
 }
-.search-hostel .departure svg:focus{
+.search-hostel .departure svg:active{
 	fill: #81b3d2;
 }
 .search-hostel .adults-children .adults,
@@ -371,12 +408,14 @@ body{
 .search-hostel .adults-children input{
 	text-align: center;
 	padding-left: 20px;
-	width: 68px;
+	width: 52px;
 }
 .search-hostel .adults-children .minus,
 .search-hostel .adults-children .plus{
 	display: block;	
-	width: 24px;
+	border: none;
+	padding: 0;
+	width: 32px;
 	background-color: #f2f2f2;
 }
 .search-hostel .adults-children .minus::before, 
@@ -394,19 +433,25 @@ body{
 	transition: 0.2s;
 }
 .search-hostel .adults-children .minus::before {
-	left: 12px;
+	left: 10px;
 }
 .search-hostel .adults-children .plus::before {
-	right: 12px;
+	right: 10px;
 } 
 .search-hostel .adults-children .plus::after {
 	transform: rotate(90deg);
+	right: 10px;
 }
 
 .search-hostel .adults-children .minus:hover::before,
 .search-hostel .adults-children .plus:hover::before,
 .search-hostel .adults-children .plus:hover::after {
-	background-color: #666666;
+	background-color: #000000;
+}
+.search-hostel .adults-children .minus:active::before,
+.search-hostel .adults-children .plus:active::before,
+.search-hostel .adults-children .plus:active::after {
+	background-color: #81b3d2;
 }
 /*
 .search-hostel .adults-input .inputAdults:focus {
@@ -431,6 +476,13 @@ body{
 	border: 0;
 	font-weight: bold;
 	text-transform: uppercase;
+}
+.search-hostel input:hover{
+	background-color: #ebebeb;
+}
+.search-hostel input:focus{
+	background-color: white;
+	outline: 2px solid #e5e5e5;
 }
 /********* СТИЛИЗАЦИЯ ИНПУТОВ, добавление иконки календаря **********/
 
@@ -553,7 +605,7 @@ body{
 .copyright svg:hover #HA-svg{
 	fill: #81b3d2;
 }
-.copyright svg:focus #HA-svg{
+.copyright svg:active #HA-svg{
 	fill: rgba(0,0,0,0.3);
 }
 /*
@@ -805,10 +857,10 @@ body{
 	z-index: 2;
 }
 .form-block fieldset input:disabled ~ svg path{
-	fill: #6a6a6a;
+	fill: rgba(0,0,0,0.3);
 }
 .form-block fieldset input:disabled ~ label{
-	color: #6a6a6a;
+	color: rgba(0,0,0,0.3);
 }
 .form-block fieldset input:checked ~ svg.cb-off{
 	display: none;
