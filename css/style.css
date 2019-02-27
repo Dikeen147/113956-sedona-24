@@ -298,23 +298,38 @@ body{
 		transform: translateY(30px);
 	}
 	100% {
-		transform: translateY(-400px);
-		opacity: 0.9;
+		transform: translateY(-800px);
+		opacity: 0.8;
 		visibility: hidden;
 	} 
+}
+@keyframes clearField {
+	0% {
+		transform: rotate(-5deg);
+	}
+	50% {
+		transform: rotate(5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+		visibility: visible;
+	}
 }
 
 .opacity-zero{
 	visibility: hidden;
 }
 .visually-show{
-	/*visibility: visible;*/
-	animation: show 1s ;
+	animation: show 1s;
 	animation-fill-mode: forwards;
 }
 .visually-close{
-	/*visibility: visible;*/
 	animation: close 1s;
+	animation-fill-mode: forwards;
+}
+.clear-field {
+	animation: clearField 1s;
+	animation-fill-mode: forwards;
 }
 .search-hostel{
 	position: absolute;
