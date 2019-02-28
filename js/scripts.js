@@ -34,6 +34,7 @@ form.addEventListener("submit", function(evt){
 	}
 });
 
+
 searchHostelBtn.addEventListener("click", function(evt){
 	if (popup.classList.contains("visually-close")) {
 		evt.preventDefault();
