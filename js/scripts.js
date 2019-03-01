@@ -19,10 +19,24 @@ try {
 }
 
 form.addEventListener("submit", function(evt) {
-	evt.preventDefault();
 	if (!arrival.value || !departure.value) {
+		evt.preventDefault();
+		if (popup.classList.contains("visually-show")) {
+			if (!arrival.value) {
+				arrival.classList.remove("arrival-input");
+				arrival.offsetWidth = arrival.offsetWidth;
+				arrival.classList.add("arrival-input");
+			}
+			if (!departure.value) {
+				departure.classList.remove("arrival-input");
+				departure.offsetWidth = departure.offsetWidth;
+				departure.classList.add("arrival-input");
+			}	
+		}
+		popup.classList.remove("clear-field");
+		popup.offsetWidth = popup.offsetWidth;
 		popup.classList.add("clear-field");
-		console.log("нужно ввести логин и пароль");	
+		console.log("Заполните пустые поля");
 	} else {
 		if (isStorageSupport) {
 			localStorage.setItem("departure", departure.value);
@@ -74,6 +88,7 @@ window.addEventListener("keydown", function(evt) {
 
 /****************************************************************************/
 // В форме поиска гостиницы при нажатии минуса или плюса, убваляет либо прибавляет
+
 var adultsInput = document.querySelector(".adults-input");
 var minus1 = adultsInput.querySelector(".minus");
 var plus1 = adultsInput.querySelector(".plus");
@@ -94,12 +109,14 @@ minus1.addEventListener("click", function() {
 	}
 	inputAdultsCount = parseInt(inputAdults.value);
 });
+
 plus1.addEventListener("click", function() {
 	if (inputAdultsCount < 100) {
 		inputAdults.value = inputAdultsCount + 1;
 	}
 	inputAdultsCount = parseInt(inputAdults.value);
 });
+
 minus2.addEventListener("click", function() {
 	if (inputChildrenCount > 0) {
 		inputChildren.value = inputChildrenCount - 1;
