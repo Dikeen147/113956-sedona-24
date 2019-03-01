@@ -9,6 +9,7 @@ body{
 	background-color: #f2f2f2;
 }
 .box-shadow {
+	position: relative;
 	width: 1200px;
 	height: auto;
 	margin: 0 auto;
@@ -299,10 +300,12 @@ body{
 		visibility: visible;
 	}
 	30% { transform: translateY(-5px); }
-	70% { transform: translateY(30px); }
+	70% { transform: translateY(30px); 
+			opacity: 1;
+	}
 	100% {
 		transform: translateY(-400px);
-		opacity: 0.8;
+		opacity: 0;
 	} 
 }
 @keyframes clearField {
@@ -315,6 +318,12 @@ body{
 	100% {
 		transform: translateX(0px);
 	}
+}
+@keyframes inputBorder {
+	0%, 100% { box-shadow: 0 0 0px 0 #CD1F27; }
+	20%, 80% { box-shadow: 0 0 2px 0 #CD1F27; }
+	30%, 70% { box-shadow: 0 0 6px 0 #CD1F27; }
+	50% { box-shadow: 0 0 10px 0 #CD1F27; }
 }
 
 .opacity-zero {
@@ -369,6 +378,11 @@ body{
 .search-hostel .departure input {
 	width: 346px;
 }
+
+.arrival-input {
+	animation: inputBorder 1s;
+}
+
 .search-hostel .arrival svg {
 	position: absolute;
 	top: 62px;
@@ -506,10 +520,14 @@ body{
 	min-height: 472px;
 }
 .map iframe {
+	position: absolute;
+	bottom: -125px;
+	z-index: 0;
 	display: block;
 }
 /********** Footer **************/
 .main-footer {
+	position: relative;
 	display: flex;
 	align-items: center;
 	width: 1200px;
