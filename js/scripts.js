@@ -1,7 +1,8 @@
-//alert("hello");
-
 // ПОКАЗАТЬ ФОРМУ ПОИСКА ГОСТИНИЦЫ
-var searchHostelBtn = document.querySelector(".search-hostel-btn");
+
+var searchHostelBtn = document.querySelector(".search-hostel-btn"); // кнопка поиска гостиницы
+var btnClose = document.querySelector(".btn-close-none"); // див поверх кнопки посика, чтобы закрыть
+
 var popup = document.querySelector(".search-hostel");
 var form = document.querySelector(".search-hostel");
 var arrival = popup.querySelector("[name=arrival]");
@@ -9,7 +10,6 @@ var departure = popup.querySelector("[name=departure]");
 
 var isStorageSupport = true;
 var storage = "";
-
 var bool = true;
 	
 try {
@@ -18,50 +18,55 @@ try {
 	isStorageSupport = false;
 }
 
-form.addEventListener("submit", function(evt){
+form.addEventListener("submit", function(evt) {
+	evt.preventDefault();
 	if (!arrival.value || !departure.value) {
-		if (popup.classList.contains("clear-field")) {
-			evt.preventDefault();
-			popup.classList.remove("clear-field");
-		} 
-			evt.preventDefault();
-			popup.classList.add("clear-field");
-			console.log("нужно ввести логин и пароль");	
+		popup.classList.add("clear-field");
+		console.log("нужно ввести логин и пароль");	
 	} else {
 		if (isStorageSupport) {
+			localStorage.setItem("departure", departure.value);
 			localStorage.setItem("arrival", arrival.value);
 		}
 	}
 });
 
-
-searchHostelBtn.addEventListener("click", function(evt){
+// Открыть форму поиска гостиницы
+searchHostelBtn.addEventListener("click", function(evt) {
+	evt.preventDefault();
+	// Если элемент содержит класс закрытия формы ( перед открытием ), то удалить
 	if (popup.classList.contains("visually-close")) {
-		evt.preventDefault();
 		popup.classList.remove("visually-close");
 	}
-	if (popup.classList.contains("visually-show")) {
-			evt.preventDefault();
-			popup.classList.remove("visually-show");
-			popup.classList.add("visually-close");
+	popup.classList.add("visually-show");
+	btnClose.classList.add("btn-close-block");	
+	arrival.focus();
+
+	if (storage) {
+		arrival.value = storage;
+		departure.focus();
 	} else {
-		evt.preventDefault();
-		popup.classList.add("visually-show");	
 		arrival.focus();
-		if (storage) {
-			arrival.value = storage;
-			departure.focus();
-		} else {
-			arrival.focus();
-		}
 	}
-	
 });
-window.addEventListener("keydown", function(evt){
+
+// Закрытие формы поиска гостиницы
+btnClose.addEventListener("click", function(evt) {
+	evt.preventDefault();
+	popup.classList.remove("visually-show");
+	popup.classList.remove("clear-field");
+	btnClose.classList.remove("btn-close-block");
+	popup.classList.add("visually-close");
+});
+
+// закрытие формы по нажатию клашиви ECS
+window.addEventListener("keydown", function(evt) {
 	if (evt.keyCode === 27 ) {
 		if (popup.classList.contains("visually-show")) {
 			evt.preventDefault();
 			popup.classList.remove("visually-show");
+			popup.classList.remove("clear-field");
+			btnClose.classList.remove("btn-close-block");
 			popup.classList.add("visually-close");
 		}
 	}
@@ -83,25 +88,25 @@ var inputChildren = document.querySelector(".inputChildren");
 var inputAdultsCount = parseInt(inputAdults.value);
 var inputChildrenCount = parseInt(inputChildren.value);
 
-minus1.addEventListener("click", function(){
+minus1.addEventListener("click", function() {
 	if (inputAdultsCount > 1) {
 		inputAdults.value = inputAdultsCount - 1;
 	}
 	inputAdultsCount = parseInt(inputAdults.value);
 });
-plus1.addEventListener("click", function(){
+plus1.addEventListener("click", function() {
 	if (inputAdultsCount < 100) {
 		inputAdults.value = inputAdultsCount + 1;
 	}
 	inputAdultsCount = parseInt(inputAdults.value);
 });
-minus2.addEventListener("click", function(){
+minus2.addEventListener("click", function() {
 	if (inputChildrenCount > 0) {
 		inputChildren.value = inputChildrenCount - 1;
 	}
 	inputChildrenCount = parseInt(inputChildren.value);
 });
-plus2.addEventListener("click", function(){
+plus2.addEventListener("click", function() {
 	if (inputChildrenCount < 100) {
 		inputChildren.value = inputChildrenCount + 1;
 	}
