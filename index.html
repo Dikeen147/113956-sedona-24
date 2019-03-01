@@ -26,11 +26,9 @@
 	<!-------------------------- MAIN -------------------------->
 	<main class="container">
 		<section class="slider">
-			<!--<img src="img/welcome1.jpg" class="slider-img" alt="Welcome to the gorgeous">-->
 			<div class="polygone"></div>
 		</section>
 
-		<!--<div class="polygone"></div>-->
 		<div class="main-title">
 			<h2>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
 			<p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>	
@@ -115,7 +113,9 @@
 	<div class="interested">
 		<h2>Заинтересовались?</h2>
 		<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+		<div href="#" class="btn-close-none"></div>
 		<a href="#" class="search-hostel-btn"><h2>Поиск гостиницы в седоне</h2></a>
+
 		<!-------------------------- ФОРМА ПОИСКА ГОСТИНИЦЫ -------------------------->
 			<form action="https://echo.htmlacademy.ru/" method="post" class="opacity-zero search-hostel">
 				<div class="arrival">
@@ -151,7 +151,7 @@
 						<label for="children">Дети:</label>
 						<div class="children-input">
 							<button type="button" class="minus" aria-label="уменьшить на один"></button>
-							<input type="text" id="children" name="children" value="10" min="0" max="100" class="inputChildren">	
+							<input type="text" id="children" name="children" value="0" min="0" max="100" class="inputChildren">	
 							<button type="button" class="plus" aria-label="увеличить на один"></button>	
 						</div>
 					</div>
@@ -160,7 +160,7 @@
 			</form>	
 
 		<section class="map">
-			<div class="map-image"></div>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d610558.8090763807!2d-112.39114221154944!3d34.785990603427194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1551433698834" width="1200" height="472" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</section>
 	</div>
 	</main>
