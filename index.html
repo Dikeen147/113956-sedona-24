@@ -5,7 +5,7 @@
 	<title>Sedona</title>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/min-style.css">
 </head>
 <body>
 	<!-------------------------- HEADER -------------------------->
@@ -16,10 +16,10 @@
 				<img src="img/sedona-logo.svg" width="140" height="72" alt="Логотип Седона">
 			</a>
 			<ul class="site-navigation">
-				<li><a href="#">Информация</a></li>
-				<li><a href="#">Фото и видео</a></li>
-				<li><a href="#">Карта штата</a></li>
-				<li><a href="hotel.html">Гостиницы</a></li>
+				<li><a href="#" aria-label="информация">Информация</a></li>
+				<li><a href="#" aria-label="фото и видео">Фото и видео</a></li>
+				<li><a href="#" aria-label="карта штата">Карта штата</a></li>
+				<li><a href="hotel.html" aria-label="гостиницы">Гостиницы</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -113,8 +113,8 @@
 	<div class="interested">
 		<h2>Заинтересовались?</h2>
 		<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-		<div href="#" class="btn-close-none"></div>
-		<a href="#" class="search-hostel-btn"><h2>Поиск гостиницы в седоне</h2></a>
+		<div class="btn-close-none"></div>
+		<a href="#" class="search-hostel-btn" aria-label="кнопка поиска гостиницы в седоне"><h2>Поиск гостиницы в седоне</h2></a>
 
 		<!-------------------------- ФОРМА ПОИСКА ГОСТИНИЦЫ -------------------------->
 			<form action="https://echo.htmlacademy.ru/" method="post" class="opacity-zero search-hostel">
@@ -143,7 +143,7 @@
 						<label for="adults">Взрослые:</label>
 						<div class="adults-input">
 							<button type="button" class="minus" aria-label="уменьшить на один"></button>
-							<input type="text" id="adults" name="adults" value="5" min="0" max="100" class="inputAdults">		
+							<input type="text" id="adults" name="adults" value="5" class="inputAdults">		
 							<button type="button" class="plus" aria-label="увеличить на один"></button>	
 						</div>
 					</div>
@@ -151,7 +151,7 @@
 						<label for="children">Дети:</label>
 						<div class="children-input">
 							<button type="button" class="minus" aria-label="уменьшить на один"></button>
-							<input type="text" id="children" name="children" value="0" min="0" max="100" class="inputChildren">	
+							<input type="text" id="children" name="children" value="0" class="inputChildren">	
 							<button type="button" class="plus" aria-label="увеличить на один"></button>	
 						</div>
 					</div>
@@ -160,7 +160,7 @@
 			</form>	
 
 		<section class="map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d610558.8090763807!2d-112.39114221154944!3d34.785990603427194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1551433698834" width="1200" height="597" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d610558.8090763807!2d-112.39114221154944!3d34.785990603427194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1551433698834" width="1200" height="597" style="border:0" allowfullscreen></iframe>
 		</section>
 	</div>
 	</main>
@@ -171,17 +171,17 @@
 		</div>
 		<div class="social">
 			<ul class="social-list">
-				<li class="social-item"><a href="#">
+				<li class="social-item"><a href="#" aria-label="ссылка на twitter">
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15">
 						<path id="twitter-svg" fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
 					</svg>
 				</a></li>
-				<li class="social-item"><a href="#">
+				<li class="social-item"><a href="#" aria-label="ссылка на facebook">
 					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
 						<path id="fb-svg" fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
 					</svg>
 				</a></li>
-				<li class="social-item"><a href="#">
+				<li class="social-item"><a href="#" aria-label="ссылка на youtube">
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
 						<path id="youtube-svg" fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
 					</svg>
@@ -190,7 +190,7 @@
 		</div>
 		<div class="copyright">
 			<p>Website by</p>
-			<a href="https://htmlacademy.ru/">
+			<a href="https://htmlacademy.ru/" aria-label="ссылка на сайт html academy">
 				<svg id="Layer_1" 
 				data-name="Layer 1" 
 				xmlns="http://www.w3.org/2000/svg" 
@@ -203,6 +203,6 @@
 	</footer>
 	</div>
 
-	<script src="js/scripts.js"></script>
+	<script src="js/min-scripts.js"></script>
 </body>
 </html>
