@@ -1,13 +1,10 @@
 // ПОКАЗАТЬ ФОРМУ ПОИСКА ГОСТИНИЦЫ
-
 var searchHostelBtn = document.querySelector(".search-hostel-btn"); // кнопка поиска гостиницы
 var btnClose = document.querySelector(".btn-close-none"); // див поверх кнопки посика, чтобы закрыть
-
 var popup = document.querySelector(".search-hostel");
 var form = document.querySelector(".search-hostel");
 var arrival = popup.querySelector("[name=arrival]");
 var departure = popup.querySelector("[name=departure]");
-
 var isStorageSupport = true;
 var storage = "";
 var bool = true;
@@ -55,7 +52,6 @@ searchHostelBtn.addEventListener("click", function(evt) {
 	popup.classList.add("visually-show");
 	btnClose.classList.add("btn-close-block");	
 	arrival.focus();
-
 	if (storage) {
 		arrival.value = storage;
 		departure.focus();
@@ -92,14 +88,11 @@ window.addEventListener("keydown", function(evt) {
 var adultsInput = document.querySelector(".adults-input");
 var minus1 = adultsInput.querySelector(".minus");
 var plus1 = adultsInput.querySelector(".plus");
-
 var childrenInput = document.querySelector(".children-input");
 var minus2 = childrenInput.querySelector(".minus");
 var plus2 = childrenInput.querySelector(".plus");
-
 var inputAdults = document.querySelector(".inputAdults");
 var inputChildren = document.querySelector(".inputChildren");
-
 var inputAdultsCount = parseInt(inputAdults.value);
 var inputChildrenCount = parseInt(inputChildren.value);
 
@@ -109,14 +102,12 @@ minus1.addEventListener("click", function() {
 	}
 	inputAdultsCount = parseInt(inputAdults.value);
 });
-
 plus1.addEventListener("click", function() {
 	if (inputAdultsCount < 100) {
 		inputAdults.value = inputAdultsCount + 1;
 	}
 	inputAdultsCount = parseInt(inputAdults.value);
 });
-
 minus2.addEventListener("click", function() {
 	if (inputChildrenCount > 0) {
 		inputChildren.value = inputChildrenCount - 1;
